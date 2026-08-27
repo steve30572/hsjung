@@ -263,11 +263,45 @@ p { margin: 0 0 12px; color: var(--text); }
 }
 .pub-authors .me { color: var(--text); font-weight: 700; }
 .pub-venue {
-  font-style: italic;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
   color: var(--text-soft);
   font-size: .9rem;
   margin-bottom: 8px;
 }
+.pub-venue .venue-full { font-style: italic; }
+.pub-venue em { font-style: italic; }
+
+/* ---------- Venue tags ---------- */
+.venue-tag {
+  display: inline-block;
+  padding: 3px 11px;
+  border-radius: 6px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  font-style: normal;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--venue, #64748b);
+  box-shadow: 0 1px 2px rgba(0,0,0,.12);
+}
+html[data-theme="dark"] .venue-tag {
+  box-shadow: none;
+  filter: saturate(.92) brightness(1.06);
+}
+
+.venue-kdd    { --venue: #d94f45; }
+.venue-www    { --venue: #0f7c8a; }
+.venue-wsdm   { --venue: #7c3aed; }
+.venue-acl    { --venue: #2f5fe0; }
+.venue-pakdd  { --venue: #b45309; }
+.venue-npj    { --venue: #0f766e; }
+.venue-eswa   { --venue: #475569; }
+.venue-workshop { --venue: #64748b; }
 .pub-links {
   display: flex;
   gap: 6px;
