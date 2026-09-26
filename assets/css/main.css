@@ -294,6 +294,7 @@ html[data-theme="dark"] .venue-tag {
   filter: saturate(.92) brightness(1.06);
 }
 
+.venue-neurips { --venue: #db2777; }
 .venue-kdd    { --venue: #d94f45; }
 .venue-www    { --venue: #0f7c8a; }
 .venue-wsdm   { --venue: #7c3aed; }
